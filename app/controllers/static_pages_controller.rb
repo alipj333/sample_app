@@ -10,4 +10,8 @@ class StaticPagesController < ApplicationController
   def help
   	@title = "Help | Rails Tutorial"
   end
+  
+  def contact
+  	@title = "Contact | Rails Tutorial"
+  end
 end

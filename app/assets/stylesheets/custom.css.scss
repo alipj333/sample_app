@@ -1,5 +1,16 @@
 @import "bootstrap";
 
+/* mixins, variables, etc.
+==============================================================================*/
+
+$grayMediumLight: #eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
 /* universal
 ==============================================================================*/
 
@@ -107,4 +118,54 @@ footer ul {
 footer ul li {
   float: left;
   margin-left: 10px;
+}
+
+
+/* forms
+==============================================================================*/
+
+form div {
+  margin: 0 0 10px;
+}
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  @include box_sizing;
+}
+input[type="text"], input[type="password"], textarea {
+  width: 80%;
+  padding: 10px;
+  background: #f5f5f5;
+}
+
+input {
+  height: auto !important;
+}
+
+label {
+  font-weight: bold;
+}
+
+#error_explanation {
+  color: #f00;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .control-group;
+  @extend .error;
+}
+
+
+/* miscellaneous
+==============================================================================*/
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
 }
